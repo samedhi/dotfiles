@@ -84,3 +84,9 @@ alias plus24h='env GIT_AUTHOR_DATE="$(date -v +24H)" GIT_COMMITTER_DATE="$(date 
 export BOOT_JVM_OPTIONS=-XX:-OmitStackTraceInFastThrow
 
 alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+
+autoload -Uz compinit
+compinit
+fpath=(/usr/local/share/zsh-completions $fpath)
