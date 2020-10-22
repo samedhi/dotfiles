@@ -314,13 +314,16 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+
+  (set-face-attribute 'default nil :height 130)
+
   (global-set-key (kbd "C-s") 'helm-swoop)
 
   (evil-leader/set-key "/" 'spacemacs/helm-project-do-ag)
 
   (spacemacs/toggle-automatic-symbol-highlight-on)
 
-  (global-set-key "\C-xp" (lambda () 
+  (global-set-key "\C-xp" (lambda ()
                             (interactive)
                             (other-window -1)))
 
@@ -329,7 +332,9 @@ you should place your code here."
     :config
     (require 'flycheck-clj-kondo))
 
-  (global-set-key (kbd "C-c s") #'cider-selector))
+  (global-set-key (kbd "C-c s") #'cider-selector)
+
+  (setq js-indent-level 2))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.

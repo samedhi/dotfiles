@@ -153,3 +153,15 @@ alias plus24h='env GIT_AUTHOR_DATE="$(date -v +24H)" GIT_COMMITTER_DATE="$(date 
 export BOOT_JVM_OPTIONS=-XX:-OmitStackTraceInFastThrow
 
 alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+# 2020-08-15 Added the following based on this -> https://emacsredux.com/blog/2020/07/16/running-emacs-with-systemd/
+export ALTERNATE_EDITOR=''
+alias e='emacsclient --tty'
+export EDITOR='emacsclient -t'
+export VISUAL='emacsclient -t'
+
+# 2020-08-17 Completion for Kitty
+autoload -Uz compinit
+compinit
+# Completion for kitty
+kitty + complete setup zsh | source /dev/stdin
