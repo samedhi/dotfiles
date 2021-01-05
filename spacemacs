@@ -32,7 +32,8 @@ values."
    dotspacemacs-configuration-layers
    '(
      yaml
-     python
+     (python :variables python-enable-yapf-format-on-save t)
+     html
      dash
      html
      javascript
@@ -43,7 +44,7 @@ values."
      better-defaults
      emacs-lisp
      git
-     markdown
+     (markdown :variables markdown-live-preview-engine 'vmd)
      org
      restclient
      (shell :variables
