@@ -165,3 +165,6 @@ autoload -Uz compinit
 compinit
 # Completion for kitty
 kitty + complete setup zsh | source /dev/stdin
+
+# 2022-03-09 Turn off the damn NVIDIA light show
+nvidia-settings --assign GPULogoBrightness=0
